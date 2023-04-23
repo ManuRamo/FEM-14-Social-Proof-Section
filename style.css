@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+:root {
+    --pink-100: hsl(333, 80%, 67%);
+    --magenta-100: hsl(300, 24%, 96%);
+    --magenta-200: hsl(303, 10%, 53%);
+    --magenta-300: hsl(300, 43%, 22%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: "League Spartan";
+}
+
+.container {
+    margin: 5rem 2rem;
+}
+
+.text {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.text h1 {
+    font-weight: 700;
+    color: var(--magenta-300);
+    line-height: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.text p {
+    color: var(--magenta-200);
+}
+
+.reviews {
+    margin-bottom: 2rem;
+}
+
+.review-box {
+    text-align: center;
+    background-color: var(--magenta-100);
+    border-radius: 1rem;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+.review-box h2 {
+    font-size: 1.2rem;
+}
+
+.review-box i {
+    color: orange;
+    margin-bottom: 0.8rem;
+}
+
+.user-box {
+    background-color: var(--magenta-300);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.user-box .info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.info img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.info .name span {
+    color: var(--pink-100);
+}
+
+@media (min-width: 850px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        padding: 0;
+        margin: 8rem 5rem;
+    }
+
+    .text {
+        text-align: left;
+        width: 60%;
+    }
+
+    .text h1 {
+        font-size: 3rem;
+        line-height: 2.8rem;
+    }
+
+    .review-box {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2rem;
+        padding: 1rem;
+        width: 80%;
+        margin-left: auto;
+    }
+
+    .review-box i {
+        margin: 0;
+    }
+
+    .review-box:nth-child(1) {
+        transform: translateX(-4rem);
+    }
+
+    .review-box:nth-child(2) {
+        transform: translateX(-2rem);
+    }
+
+    .users {
+        grid-column: 1/3;
+        display: flex;
+        align-items: stretch;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .user-box:nth-child(2) {
+        transform: translateY(1rem);
+    }
+
+    .user-box:nth-child(3) {
+        transform: translateY(2rem);
+    }
+}
